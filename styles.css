@@ -10,14 +10,24 @@
 body{
     background-color: var(--main-color);
     color: var(--second-color);
-    background-image: url(/ASSETS/Group\ 2.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100%;
-    background-position: 0 7em;
-    
-    
+    background: linear-gradient(-45deg, #221f1f, #242726, #2e3233, #263238, #26324a);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
 }
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+    
 
 
 
@@ -33,11 +43,15 @@ strong{
     padding: 2em;
     text-align: center;
     background-color: var(--alternate-bg);
+    background: linear-gradient(-45deg, #ffa685, #ffcfbd,#ffacef, #ff6ee3);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+    filter: drop-shadow(5px 5px 10px var(--main-color));
 }
 
 .header_nav_item{
     text-decoration: none;
-    color: var(--second-color);
+    color: var(--main-color);
     font-family: var(--main-font);
     font-size: 20px;
     padding: 0 3em;
@@ -63,6 +77,12 @@ strong{
 display: flex;
 justify-content: center;
 align-items: center;
+
+}
+
+.main_body_img{
+    filter: drop-shadow(5px 5px 10px var(--main-color));
+
 }
 .main_body_text{
     font-size: 20px;
@@ -84,7 +104,7 @@ align-items: center;
     align-items: center;
     font-size: 32px;
     font-weight: 900;
-    padding: 2em;
+    padding-top: 3em;
 }
 
 .MainText_Links{
@@ -149,16 +169,8 @@ align-items: center;
 
 
   .header_nav_item:hover{
-    text-shadow:
-        0 0 7px var(--second-color),
-        0 0 10px var(--second-color),
-        0 0 21px var(--second-color),
-        0 0 42px var(--orange),
-        0 0 75px var(--orange),
-        0 0 80px var(--orange),
-        0 0 99px var(--orange),
-        0 0 110px var(--orange);
-
+    color: var(--second-color);
+    filter: drop-shadow(1px 1px 10px var(--main-color));
         
 }
 
