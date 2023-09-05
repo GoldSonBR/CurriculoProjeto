@@ -1,0 +1,113 @@
+.header_nav{
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+    text-align: center;
+    background-color: var(--alternate-bg);
+    background: linear-gradient(-45deg, #ffa685, #ffcfbd,#ffacef, #ff6ee3);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+    filter: drop-shadow(5px 5px 10px var(--main-color));
+}
+
+.header_nav_item{
+    display: flex;
+    text-decoration: none; 
+    filter: drop-shadow(1px 1px 10px #00000078);
+    color: var(--second-color);
+    font-family: var(--main-font);
+    font-size: 20px;
+    padding: 1em 3em;
+    gap: 0 2em;
+    font-weight: 400;
+    margin: 12px;
+}
+.header_nav_item_mobile{
+    display: none;
+  }
+    
+
+.header_nav_item:hover{
+    color: var(--second-color);
+    
+    position: relative;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.01);
+    filter: drop-shadow(1px 1px 10px #0000006d);
+
+    &::after {
+        position: absolute;
+        border-radius: 10px;
+        content: "";  
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        height: 101%;
+        width: 101%;
+        transform: scale(1) translateZ(0);
+        filter: blur(1px);
+        background: linear-gradient(
+          to left,
+          #CEB8FFff,
+          #AFAAFEff,
+          #BBAFFEff,
+          #BDB0FEff,
+          #E3C2FEff
+          
+          
+        );
+        background-size: 200% 200%;
+        animation: animateGlow 20.5s linear infinite;
+      }
+
+      
+}
+
+
+@media screen and (max-width : 1024px ){
+    .header_nav_item{
+        display: none;
+    }
+    .header_nav_mobile{
+        display: flex;
+    }
+
+    .header_nav_item_mobile{
+        display: flex;
+        margin: 0 5em ;
+        filter: drop-shadow(1px 1px 10px #00000078);
+      }
+
+      
+}
+
+@media screen and (max-width : 428px ){
+    .header_nav{
+        display: flex;
+        justify-content: center;
+        padding: 1em 0;
+        text-align: center;
+        background-color: var(--alternate-bg);
+        background: linear-gradient(-45deg, #ffa685, #ffcfbd,#ffacef, #ff6ee3);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        filter: drop-shadow(5px 5px 10px var(--main-color));
+    }
+    .header_nav_item{
+        display: none;
+    }
+    .header_nav_mobile{
+        display: flex;
+    }
+
+    .header_nav_item_mobile{
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        padding: 0 2em;
+        margin: 0 0;
+        filter: drop-shadow(1px 1px 10px #00000078);
+      }
+
+      
+}
