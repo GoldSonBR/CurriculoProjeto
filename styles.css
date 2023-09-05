@@ -12,6 +12,7 @@
 
 
 body{
+	
     background-color: var(--main-color);
     color: var(--second-color);
     background: linear-gradient(-45deg, #221f1f, #242726, #2e3233, #263238, #26324a);
