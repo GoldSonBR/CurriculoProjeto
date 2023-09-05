@@ -3,6 +3,7 @@
 @import url(//main.css);
 
 :root  {
+	color-scheme: light only;
     --main-color: #13100C;
     --second-color: #fff;
     --main-font: Lexend Deca;
